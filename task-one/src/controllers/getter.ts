@@ -6,7 +6,7 @@ export const getter: RequestHandler = (req, res, next) => {
     const current_day = new Date(Date.now()).toLocaleDateString("en-US", {
       weekday: "long",
     });
-    const utc_time = new Date(Date.now()).toUTCString();
+    const utc_time = new Date(Date.now()).toISOString();
     const github_file_url = process.env.GITHUB_FILE || "";
     const github_repo_url = process.env.GITHUB_URL || "";
     const status_code = 200;
