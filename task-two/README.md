@@ -55,7 +55,8 @@ Before you begin, ensure you have met the following requirements:
 ### Link to API
  ```bash
     https://hngx-two.onrender.com
+ ```
 
 ### Project UML Diagram
-    1. User UML
-    !Person Model Diagram(https://github.com/AirZED/HNGX/blob/master/task-two/uml/user-diagram.png=true)
+1. User UML
+    !Person Model Diagram(./uml/user-diagram.png)
