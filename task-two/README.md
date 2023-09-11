@@ -1,6 +1,6 @@
-# Express TypeScript Project
+# HNGx Task Two
 
-This is a basic template for building an Express.js application using TypeScript.
+This is a READme or Guide through my project which is a simple REST API that can perform basic CRUDE OPERATIONS. HNGx task 2
 
 ## Table of Contents
 
