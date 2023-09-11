@@ -7,8 +7,8 @@ export const createPerson: RequestHandler = catchAsync(
   async (req, res, next) => {
     const { name } = req.body;
 
-    if (typeof name !== "string") {
-      return next(new AppError("Please ensure name is a string", 400));
+    if (!name || typeof name !== "string") {
+      return next(new AppError("Please ensure name is provided and must be a string", 400));
     }
 
     const person = await Person.create({ name });
@@ -27,6 +27,10 @@ export const createPerson: RequestHandler = catchAsync(
 export const fetchPerson: RequestHandler = catchAsync(
   async (req, res, next) => {
     const { id } = req.params;
+
+    if (!id) {
+      return next(new AppError("Please provide user id in param", 400));
+    }
     const person = await Person.findOne({ _id: id });
 
     if (!person) {
@@ -45,6 +49,9 @@ export const patchPerson: RequestHandler = catchAsync(
     const { id } = req.params;
     const { name } = req.body;
 
+    if (!id || !name || typeof name !== 'string') {
+      return next(new AppError("Please provide user id and new name", 400));
+    }
     const person = await Person.findByIdAndUpdate(
       id,
       { name },
@@ -65,6 +72,11 @@ export const patchPerson: RequestHandler = catchAsync(
 export const deletePerson: RequestHandler = catchAsync(
   async (req, res, next) => {
     const { id } = req.params;
+
+    if (!id) {
+      return next(new AppError("Please provide user id in param", 400));
+    }
+    
     const person = await Person.findByIdAndDelete(id);
 
     if (!person) {
