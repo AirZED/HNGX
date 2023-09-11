@@ -7,9 +7,10 @@ import {
   fetchPerson,
   patchPerson,
   deletePerson,
+  getAll,
 } from "../controllers/personController";
 
-router.route("/").post(createPerson);
+router.route("/").get(getAll).post(createPerson);
 
 router.route("/:id").get(fetchPerson).patch(patchPerson).delete(deletePerson);
 
