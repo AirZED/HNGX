@@ -3,6 +3,19 @@ import AppError from "../utils/appError";
 import Person from "../models/personModel";
 import catchAsync from "../utils/catchAsync";
 
+export const getAll: RequestHandler= catchAsync(async (req, res, next) => {
+  
+    const person = await Person.find()
+
+    if (!person) {
+      return next(new AppError("Person does not exist", 400));
+    }
+
+    res.status(201).json({
+      message: "success",
+      person,
+    });
+})
 export const createPerson: RequestHandler = catchAsync(
   async (req, res, next) => {
     const { name } = req.body;
