@@ -21,7 +21,7 @@ app.use(xss());
 // handle non existent route issue
 app.all("*", (req: Request, res: Response, next: NextFunction): void => {
   return next(
-    new AppError(`${req.originalUrl} us not found on this server`, 404)
+    new AppError(`${req.originalUrl} route is not found on this server`, 404)
   );
 });
 
