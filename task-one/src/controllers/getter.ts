@@ -6,9 +6,10 @@ export const getter: RequestHandler = (req, res, next) => {
     const current_day = new Date(Date.now()).toLocaleDateString("en-US", {
       weekday: "long",
     });
-    const utc_time = new Date(Date.now()).toUTCString();
+    const time = new Date(Date.now()).toISOString();
+    const utc_time = time.split('.')[0]+'Z';
     const github_file_url = process.env.GITHUB_FILE || "";
-    const github__repo_url = process.env.GITHUB_URL || "";
+    const github_repo_url = process.env.GITHUB_URL || "";
     const status_code = 200;
 
     res.status(200).json({
@@ -17,7 +18,7 @@ export const getter: RequestHandler = (req, res, next) => {
       utc_time,
       track,
       github_file_url,
-      github__repo_url,
+      github_repo_url,
       status_code,
     });
   } catch (error) {
