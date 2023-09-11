@@ -22,24 +22,24 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone this repository:
-
    ```bash
    git clone https://github.com/AirZED/HNGX.git
-
-
 ### Navigation
 2. Navigate to the project directory:
-
     ```bash
         cd HNGX
         cd task-two
-
-
 ### Installing Dependencies
 3. Install application dependencies
     ```bash 
         npm install
+### Running the Application
+4. Run the application using the following commands
+    ```bash
+        tsc -w //to enter watch mood
+        npm run start:dev 
 
+        
 
 
     
