@@ -5,6 +5,7 @@ class PersonModel {
   + updatePerson(id: string): Person
   + deletePerson(id: string): void
   + getPerson(id: string): Person
+  + getAll():Persons[]
 }
 
 class PersonController {
@@ -13,6 +14,7 @@ class PersonController {
   + updatePerson(id: string): User
   + deletePerson(id: string): void
   + getPerson(id: string): User
+  + getAll():Persons[]
 }
 
 class ErrorController {

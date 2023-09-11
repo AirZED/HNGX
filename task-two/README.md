@@ -56,7 +56,7 @@ Before you begin, ensure you have met the following requirements:
  ```bash
     https://hngx-two.onrender.com/api/user_id - GET, UPDATE, DELETE
 
-    https://hngx-two.onrender.com/api - POST
+    https://hngx-two.onrender.com/api - GET, POST
  ```
 ### Link to Documentation
 ```bash

@@ -36,7 +36,10 @@ class ErrorController {
         error = new AppError("Unhandled error", 500);
       }
 
-      return this.handleProdError(error, res);
+      console.log("error", error);
+      console.log("err", err);
+
+      return this.handleProdError(error || err, res);
     }
   };
 
