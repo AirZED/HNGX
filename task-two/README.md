@@ -58,4 +58,4 @@ Before you begin, ensure you have met the following requirements:
 
 ### Project UML Diagram
     1. User UML
-    !Person Model Diagram(https://github.com/[username]//blob/[branch]/image.jpg?raw=true)
+    !Person Model Diagram(https://github.com/AirZED/HNGX/blob/master/task-two/uml/user-diagram.png=true)
