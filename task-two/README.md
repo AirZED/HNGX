@@ -43,7 +43,7 @@ Before you begin, ensure you have met the following requirements:
 5. Project is neatly structured as shown below
 - **`src/`**: This directory contains the source code of the application.
   - **`controllers/`**: Controllers for handling HTTP requests and business logic.
-  - **`middlewares/`**: Custom middleware functions for request processing.
+  - **`utils/`**: Custom functions for request processing.
   - **`models/`**: Data models or database schemas.
   - **`routes/`**: Express route definitions, organized by feature or resource.
   - **`app.ts`**: The entry point of the application that sets up the Express app.
