@@ -9,14 +9,7 @@ This is a basic template for building an Express.js application using TypeScript
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
 - [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Routes](#routes)
-- [Controllers](#controllers)
-- [Middlewares](#middlewares)
-- [Error Handling](#error-handling)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Prerequisites
 
@@ -27,14 +20,19 @@ Before you begin, ensure you have met the following requirements:
 
 ## Getting Started
 
-### Installation
+2. ### Installation
 
-1. Clone this repository:
+a. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/express-typescript-project.git
+   git clone https://github.com/AirZED/HNGX.git```
 
 
-2.Navigate to the project directory:
-    cd HNGx
+b. Navigate to the project directory:
+
+    ```bash
+        cd HNGX
+        cd task-two
+
+
     
