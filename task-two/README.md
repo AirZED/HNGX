@@ -36,10 +36,16 @@ Before you begin, ensure you have met the following requirements:
 ### Running the Application
 4. Run the application using the following commands
     ```bash
-        tsc -w //to enter watch mood
+        tsc -w /* to enter watch mood */
         npm run start:dev 
 
-        
-
-
-    
+### Project Structure
+5. Project is neatly structured as shown below
+- **`src/`**: This directory contains the source code of the application.
+  - **`controllers/`**: Controllers for handling HTTP requests and business logic.
+  - **`middlewares/`**: Custom middleware functions for request processing.
+  - **`models/`**: Data models or database schemas.
+  - **`routes/`**: Express route definitions, organized by feature or resource.
+  - **`app.ts`**: The entry point of the application that sets up the Express app.
+  - **`db.ts`**: Hold the Database connection logic.
+  - **`server.ts`**: Configures and starts the Express server.
