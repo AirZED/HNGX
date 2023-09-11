@@ -1,0 +1,31 @@
+@startuml
+class UserModel { 
+  - name: string
+  + createUser(): User
+  + updateUser(id: string): User
+  + deleteUser(id: string): void
+  + getUser(id: string): User
+}
+
+class UserController {
+  - userModel: UserModel
+  + createUser(): User
+  + updateUser(id: string): User
+  + deleteUser(id: string): void
+  + getUser(id: string): User
+}
+
+class ErrorController {
+  + handleErrorResponse(err: Error): void
+  + handleDevError(err: Error): void
+  + handleProdError(err:Error): void
+  + handleJWTExpireError(): Error
+  + handleCastErrorDB(err: Error): Error
+  + handleDuplicateFieldsDB(err: Error): Error
+  + handleValidateErrorDB(err: Error): Error
+  + hendleJWTError():Error
+}
+
+UserModel -- UserController: *-1
+UserController -- ErrorController: 1-1
+@enduml

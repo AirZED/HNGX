@@ -10,6 +10,8 @@ This is a READme or Guide through my project which is a simple REST API that can
 - [Installing Dependecies](#installing-dependencies)
 - [Running the Application](#running-the-application)
 - [Project Structure](#project-structure)
+- [Link to API](#link-to-api)
+- [Project UML]()
 
 
 ## Prerequisites
@@ -49,3 +51,11 @@ Before you begin, ensure you have met the following requirements:
   - **`app.ts`**: The entry point of the application that sets up the Express app.
   - **`db.ts`**: Hold the Database connection logic.
   - **`server.ts`**: Configures and starts the Express server.
+
+### Link to API
+ ```bash
+    https://hngx-two.onrender.com
+
+### Project UML Diagram
+    1. User UML
+    !Person Model Diagram(https://github.com/[username]//blob/[branch]/image.jpg?raw=true)
