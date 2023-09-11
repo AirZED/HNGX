@@ -1,18 +1,18 @@
 @startuml
-class UserModel { 
+class PersonModel { 
   - name: string
-  + createUser(): User
-  + updateUser(id: string): User
-  + deleteUser(id: string): void
-  + getUser(id: string): User
+  + createPerson(): Person
+  + updatePerson(id: string): Person
+  + deletePerson(id: string): void
+  + getPerson(id: string): Person
 }
 
-class UserController {
-  - userModel: UserModel
-  + createUser(): User
-  + updateUser(id: string): User
-  + deleteUser(id: string): void
-  + getUser(id: string): User
+class PersonController {
+  - personModel: PersonModel
+  + createPerson(): User
+  + updatePerson(id: string): User
+  + deletePerson(id: string): void
+  + getPerson(id: string): User
 }
 
 class ErrorController {
@@ -26,6 +26,6 @@ class ErrorController {
   + hendleJWTError():Error
 }
 
-UserModel -- UserController: *-1
-UserController -- ErrorController: 1-1
+PersonModel -- PersonController: *-1
+PersonController -- ErrorController: 1-1
 @enduml

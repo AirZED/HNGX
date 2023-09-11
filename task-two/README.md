@@ -58,7 +58,10 @@ Before you begin, ensure you have met the following requirements:
 
     https://hngx-two.onrender.com/api - POST
  ```
-
+### Link to Documentation
+```bash
+    https://documenter.getpostman.com/view/22877787/2s9YC1XaZ5
+```
 ### Project UML Diagram
 #### User UML
 ![Person Model Diagram](./uml/user-diagram.png)

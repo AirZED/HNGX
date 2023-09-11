@@ -5,13 +5,13 @@ import mongoSanitize from "express-mongo-sanitize";
 const xss = require("xss-clean");
 
 import AppError from "./utils/appError";
-import getterRouter from "./routes/userRoute";
+import personRouter from "./routes/personRoute";
 
 const app = express();
 app.use(express.json());
 
 // mount routers
-app.use("/api", getterRouter);
+app.use("/api", personRouter);
 
 // protection strategies
 app.use(helmet());
