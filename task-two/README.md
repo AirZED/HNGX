@@ -58,5 +58,5 @@ Before you begin, ensure you have met the following requirements:
  ```
 
 ### Project UML Diagram
-1. User UML
+## User UML
 ![Person Model Diagram](./uml/user-diagram.png)
