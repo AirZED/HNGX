@@ -2,7 +2,6 @@ import mongoose, { Document } from "mongoose";
 
 export interface IPerson extends Document {
   name: String;
-  __v: any;
 }
 
 const PersonSchema = new mongoose.Schema<IPerson>(

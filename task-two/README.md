@@ -54,7 +54,7 @@ Before you begin, ensure you have met the following requirements:
 
 ### Link to API
  ```bash
-    https://hngx-two.onrender.com/api/user_id - GET, UPDATE, DELETE
+    https://hngx-two.onrender.com/api/user_id - GET, PUT, DELETE
 
     https://hngx-two.onrender.com/api - GET, POST
  ```

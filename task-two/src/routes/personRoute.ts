@@ -12,6 +12,6 @@ import {
 
 router.route("/").get(getAll).post(createPerson);
 
-router.route("/:id").get(fetchPerson).patch(patchPerson).delete(deletePerson);
+router.route("/:id").get(fetchPerson).put(patchPerson).delete(deletePerson);
 
 export default router;
