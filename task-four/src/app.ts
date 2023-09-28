@@ -3,6 +3,7 @@ import errorController from "./controllers/errorController";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
 const xss = require("xss-clean");
+const cors = require("cors");
 
 import AppError from "./utils/appError";
 import videoRouter from "./routes/videoRoutes";
@@ -13,6 +14,7 @@ app.use(express.json());
 // mount routers
 app.use("/api", videoRouter);
 
+app.use(cors());
 // protection strategies
 app.use(helmet());
 app.use(mongoSanitize());
