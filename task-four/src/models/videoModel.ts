@@ -3,14 +3,14 @@ import mongoose, { Document } from "mongoose";
 export interface IVideo extends Document {
   title: String;
   description: String;
-  video: Buffer;
+  url: String;
 }
 
 const VideoSchema = new mongoose.Schema<IVideo>(
   {
     title: String,
     description: String,
-    video: { type: Buffer, required: [true, "Video must not be empty"] },
+    url: String,
   },
   {
     timestamps: true,

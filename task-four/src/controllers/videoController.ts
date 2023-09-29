@@ -13,10 +13,7 @@ export const getSingleVideo: RequestHandler = catchAsync(
       return next(new AppError("Video not found", 404));
     }
 
-    res.status(200).json({
-      status: "success",
-      video,
-    });
+    res.status(200).json({ status: "success", video });
   }
 );
 
@@ -24,10 +21,19 @@ export const createVideo: RequestHandler = catchAsync(
   async (req, res, next) => {
     const { title, description } = req.body;
 
+    // console.log(req.body);
+    console.log(req.file);
+
+    const filename = req?.file?.filename;
+
+    if (!filename) {
+      return next(new AppError("Video file not uploaded", 400));
+    }
+
     const video = await Video.create({
       title,
       description,
-      video: req.file?.buffer.toString("base64"),
+      url: `${req.protocol}://${req.get("host")}/uploads/${filename}`,
     });
 
     if (!video) {
@@ -49,9 +55,6 @@ export const getAllVideos: RequestHandler = catchAsync(
       return next(new AppError("Video not found", 404));
     }
 
-    res.status(200).json({
-      status: "success",
-      videos,
-    });
+    res.status(200).json({ status: "success", videos });
   }
 );

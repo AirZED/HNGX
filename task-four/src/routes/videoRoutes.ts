@@ -1,8 +1,16 @@
 import { Router } from "express";
 import multer from "multer";
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, __dirname + "/../../uploads");
+  },
+  filename: (req, file, callback) => {
+    callback(null, file.originalname);
+  },
+});
+
+const uploads = multer({ storage: storage });
 
 const router = Router();
 
@@ -12,7 +20,7 @@ import {
   getAllVideos,
 } from "../controllers/videoController";
 
-router.route("/").get(getAllVideos).post(upload.single("video"), createVideo);
+router.route("/").get(getAllVideos).post(uploads.single("file"), createVideo);
 
 router.route("/:id").get(getSingleVideo);
 

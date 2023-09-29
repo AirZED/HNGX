@@ -1,3 +1,4 @@
+const path = require("path");
 import express, { Request, Response, NextFunction } from "express";
 import errorController from "./controllers/errorController";
 import helmet from "helmet";
@@ -14,6 +15,9 @@ app.use(express.json());
 
 // mount routers
 app.use("/api", videoRouter);
+
+// displays static content from the server
+app.use("/uploads", express.static(path.join(__dirname, "./../uploads")));
 
 app.use(cors());
 // protection strategies
