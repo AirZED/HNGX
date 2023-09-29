@@ -9,6 +9,7 @@ import AppError from "./utils/appError";
 import videoRouter from "./routes/videoRoutes";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // mount routers
